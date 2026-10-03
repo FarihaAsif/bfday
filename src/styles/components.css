@@ -1,0 +1,321 @@
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  box-shadow: var(--shadow-paper);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: var(--color-red);
+  color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-red-hover);
+}
+
+.btn-light {
+  background-color: var(--color-cream);
+  color: var(--color-navy);
+  border: 2px solid var(--color-navy);
+}
+
+/* Scrapbook Frame System */
+.scrapbook-layout-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scrapbook-page-container {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-cream);
+  overflow: hidden;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrapbook-hand-border {
+  position: absolute;
+  top: 15px; left: 15px; right: 15px; bottom: 15px;
+  border: 3px solid rgba(43, 74, 138, 0.4);
+  pointer-events: none;
+  z-index: 1;
+  /* Make the border look drawn/imperfect */
+  border-radius: 2px 255px 3px 225px / 255px 5px 225px 3px;
+}
+
+.scrapbook-content {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  padding: var(--spacing-xl);
+  overflow: hidden;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Decorations */
+.decor-plaid-strip {
+  position: absolute;
+  top: -12px;
+  bottom: -12px;
+  left: -12px;
+  width: 40px;
+  background-color: var(--color-royal-blue);
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.2) 10px, rgba(255,255,255,0.2) 20px);
+  border-right: 4px solid var(--color-navy);
+  border-radius: 12px 0 0 24px;
+  z-index: 2;
+}
+
+.decor-star {
+  color: var(--color-royal-blue);
+  filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.2));
+  z-index: 3;
+}
+
+.frame-star-tl {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  width: 80px;
+  height: 80px;
+  transform: rotate(-15deg);
+}
+
+.decor-generic {
+  position: absolute;
+  background-color: var(--color-royal-blue);
+  z-index: 2;
+}
+
+.frame-swirl-tr {
+  top: -10px;
+  right: 40px;
+  width: 100px;
+  height: 30px;
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+
+.frame-web-r {
+  top: 30%;
+  right: -20px;
+  width: 60px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.frame-sparkle-br {
+  bottom: -20px;
+  right: -10px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+  background-color: #cbd5e0;
+}
+
+/* Polaroid */
+.polaroid-container {
+  display: inline-block;
+  position: relative;
+  z-index: 5;
+  filter: drop-shadow(var(--shadow-polaroid));
+}
+
+.polaroid-frame {
+  background-color: #fcf9f2; /* slightly warm off-white */
+  padding: 12px 12px 40px 12px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Add a very subtle grain to polaroid frame */
+.polaroid-frame::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="g"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23g)"/%3E%3C/svg%3E');
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.polaroid-image-container {
+  background-color: #e0e0e0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.polaroid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.1) sepia(0.1);
+}
+
+.polaroid-caption {
+  position: absolute;
+  bottom: 8px;
+  width: calc(100% - 24px);
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-marker-ink);
+}
+
+/* Gift Item */
+.gift-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.gift-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(var(--shadow-paper-lifted));
+}
+
+.gift-item-shadow {
+  position: absolute;
+  bottom: 5%;
+  width: 70%;
+  height: 10%;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 70%);
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(4px);
+}
+
+/* NEW SCRAPBOOK PRIMITIVES */
+
+/* Sticker Buttons */
+.btn-sticker {
+  padding: 0.8rem 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: var(--color-cream);
+  color: var(--color-navy);
+  box-shadow: var(--shadow-sticker);
+  border: 2px solid white;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.btn-sticker::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23n)" opacity="0.1"/%3E%3C/svg%3E');
+  pointer-events: none;
+}
+
+.btn-sticker-primary {
+  background-color: var(--color-royal-blue);
+  color: white;
+  border-color: #fff;
+}
+
+.btn-sticker-light {
+  background-color: white;
+  color: var(--color-navy);
+  border-color: var(--color-cream);
+  font-family: var(--font-handwritten);
+  font-size: 1.5rem;
+}
+
+/* Scrapbook Paper */
+.scrapbook-paper-piece {
+  position: relative;
+  background-color: var(--color-aged-paper);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-paper-flat);
+  /* Irregular polygon to make edges look slightly imperfect/cut */
+  clip-path: polygon(1% 0%, 98% 1%, 100% 98%, 1% 100%, 0% 50%);
+  z-index: 5;
+}
+
+.paper-grain {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="grain"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23grain)"/%3E%3C/svg%3E');
+  mix-blend-mode: multiply;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Washi Tape */
+.washi-tape {
+  height: 25px;
+  position: absolute;
+  z-index: 20;
+  box-shadow: var(--shadow-tape);
+  /* jagged tape edges */
+  clip-path: polygon(2% 0%, 98% 2%, 100% 10%, 97% 20%, 99% 30%, 96% 40%, 100% 50%, 97% 60%, 99% 70%, 96% 80%, 100% 90%, 98% 100%, 2% 98%, 0% 90%, 3% 80%, 1% 70%, 4% 60%, 0% 50%, 3% 40%, 1% 30%, 4% 20%, 0% 10%);
+}
+
+.washi-blue {
+  background-color: var(--color-tape-blue);
+}
+
+.washi-cream {
+  background-color: var(--color-tape);
+}
+
+.washi-red {
+  background-color: rgba(196, 68, 68, 0.6);
+}
+
+.washi-pattern {
+  background-color: var(--color-tape);
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(43,74,138,0.2) 5px, rgba(43,74,138,0.2) 10px);
+}
+
+.washi-texture {
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noise)"/%3E%3C/svg%3E');
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+}
+
+/* Handwritten Note */
+.handwritten-note {
+  position: absolute;
+  font-size: 1.5rem;
+  z-index: 15;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+}
+
+/* Doodle */
+.doodle {
+  pointer-events: none;
+  z-index: 12;
+}
