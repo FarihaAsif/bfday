@@ -1,3 +1,7 @@
+import giftboxCardImage from "../../reference/images/giftbox/giftboxcard.jpg";
+import vinylImageImport from "../../reference/images/giftbox/vinyl.jpg";
+import teraMeraPyarMusic from "../../reference/song/Ahmed_Jahanzeb_-_Tera_Mera_Hai_Pyar_From_Ishq_Murshid_(mp3.pm).mp3";
+
 // ======================================
 // EDITABLE PERSONAL CONTENT
 // ======================================
@@ -16,63 +20,58 @@ export const siteContent = {
     noText: "NO",
     sadTitle: "WHY DID YOU CLICK NO!",
     retryText: "TRY AGAIN",
-    characterCute: "/assets/illustrations/character-cute.svg",
-    characterCrying: "/assets/illustrations/character-crying.svg",
+    characterCute: "/images/characters/acceptgift.jpg",
+    characterCrying: "/images/characters/whyno.jpg",
   },
   
   gifts: {
     title: "Choose Your Gifts",
-    envelopeImg: "/assets/gifts/envelope.svg",
-    bouquetImg: "/assets/gifts/bouquet.svg",
-    giftBoxImg: "/assets/gifts/giftbox.svg",
+    envelopeImg: "/images/gifts/letter.jpg",
+    bouquetImg: "/images/gifts/bouquetout.jpg",
+    giftBoxImg: "/images/gifts/gitbox.jpg",
   },
   
   letter: {
-    body: `Heyy Babyyyy! ❤️
-Happy Boyfriend's Day to the besttt boyfriend in
-the whole world! 😊 ❤️ I love how you're the
-sweetest, hottest, and calmest person I've ever
-known. You have this magical way of making me
-happy just by existing and by doing all the little
-things that make me feel so loved and special.
-You're honestly the most caring person I know.
-You always put everyone before yourself, and I
-swear, how sweet is thattt? 🥹 I keep falling for
-you EVERY SINGLE DAY, even when I think it's
-impossible to love you more.
+    body: `Myon Zuv,
 
-I'm so incredibly proud of you for managing so
-many things at once and still being the strong,
-kind, and amazing person you are. You're
-genuinely one of the strongest people I know,
-and I hope you always remember how proud I
-am of you.
-I love you so, so much, babyyyyy. ❤️
-Happy Boyfriend's Day, my favourite person!`,
+Happy Boyfriend’s Day, my love. ❤️
+
+I don’t think I say it enough, but I’m so, so grateful to have you. You take care of me in so many little ways, and even when we have silly misunderstandings, I never want you to doubt how much I love and value you.
+
+You’ve become such a special part of my life, and honestly, I just love having you and your presence, your hugs, your stupid jokes, and all the little moments we share.
+
+Thank you for loving me, taking care of me, and simply being my person. I’m so proud of you, and I hope you always know how deeply you are loved.
+
+I love you more than I can put into words. ❤️
+
+Happy Boyfriend’s Day, Zuv.
+
+Always yours,
+Fari`,
     photos: {
-      topLeft: "/assets/photos/placeholder-1.svg",
-      topRight: "/assets/photos/placeholder-2.svg",
-      bottomLeft: "/assets/photos/placeholder-3.svg",
-      bottomRight: "/assets/photos/placeholder-4.svg",
+      topLeft: "/images/letter/photo1.jpeg",
+      topRight: "/images/letter/photo2.jpeg",
+      bottomLeft: "/images/letter/photo3.jpeg",
+      bottomRight: "/images/letter/photo4.jpeg",
     },
   },
 
   bouquet: {
     heading: "i have the most\nhandsome bf <3",
-    image: "/assets/gifts/bouquet.svg",
+    image: "/images/bouquet/bouquetin.jpg",
   },
 
   final: {
-    vinylText: "AND\nSUDDENLY,\nALL THE LOVE\nSONGS WERE ABOUT\nyou ♡",
+    vinylText: "",
     title: "I LOVE YOU",
     subtitle: "Soooooo.....!\nMUCH ♥",
-    vinylImage: "/assets/illustrations/vinyl.svg",
-    finalCardImage: "/assets/illustrations/final-card.svg",
+    vinylImage: vinylImageImport,
+    finalCardImage: giftboxCardImage,
   },
 
   music: {
-    title: "Tu Hi Mera",
-    artist: "Pritam Chakraborty",
-    src: "/assets/music/placeholder.mp3",
+    title: "Tera Mera Hai Pyar",
+    artist: "Ahmed Jahanzeb",
+    src: teraMeraPyarMusic,
   },
 };

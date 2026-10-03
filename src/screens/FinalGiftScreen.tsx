@@ -27,14 +27,16 @@ export const FinalGiftScreen: React.FC = () => {
                 alt="Vinyl" 
                 className="vinyl-illustration" 
               />
-              <div className="vinyl-text font-handwritten">
-                {siteContent.final.vinylText.split('\n').map((line, i) => (
-                  <React.Fragment key={i}>
-                    {line}
-                    <br />
-                  </React.Fragment>
-                ))}
-              </div>
+              {siteContent.final.vinylText && (
+                <div className="vinyl-text font-handwritten">
+                  {siteContent.final.vinylText.split('\n').map((line, i) => (
+                    <React.Fragment key={i}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </div>
+              )}
             </ScrapbookPaper>
 
             <motion.div 
