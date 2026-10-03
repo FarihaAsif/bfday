@@ -1,7 +1,5 @@
 import giftboxCardImage from "../../reference/images/giftbox/giftboxcard.jpg";
 import vinylImageImport from "../../reference/images/giftbox/vinyl.jpg";
-import teraMeraPyarMusic from "../../reference/song/Ahmed_Jahanzeb_-_Tera_Mera_Hai_Pyar_From_Ishq_Murshid_(mp3.pm).mp3";
-
 // ======================================
 // EDITABLE PERSONAL CONTENT
 // ======================================
@@ -72,6 +70,6 @@ Fari`,
   music: {
     title: "Tera Mera Hai Pyar",
     artist: "Ahmed Jahanzeb",
-    src: teraMeraPyarMusic,
+    src: "/audio/tera-mera-hai-pyar.mp3",
   },
 };
